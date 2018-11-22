@@ -1,5 +1,5 @@
 /*********************************************************************
-** Program name: Stack and Queue STL Containers 
+** Program name: Stack and Queue STL Containers
                  [STL = Standard Template Library]
 ** Author: Ryan DiRezze
 ** Date: November 25, 2018
@@ -12,9 +12,9 @@
 // game introduction menu
 void introMenu(bool& status) {
    // introduction
-   string program_name = "searchSort program in Lab 8";
+   string program_name = "Linear Data Structures with STL Containers Program";
    cout << "Hello! Welcome to the " << program_name << "!" << endl << endl;
-   
+
    cout << "What would you like to do?" << endl;
    cout << "   1. Start" << endl;
    cout << "   2. Exit" << endl;
@@ -34,44 +34,25 @@ void introMenu(bool& status) {
    }
 }
 
-// primary menu that users use to navigate the program
-void GameMenu(int& option1) {
-   
-   // ensure a valid character is chosen for team #1
-   while(option1 != 1 && option1 != 2 && option1 != 3 && option1 != 4 && option1 != 5 && option1 != 6) {
-      // menu prompt
-      cout << "Please select an option from the following choices:" << endl;
-      cout << "Input the option1's corresponding letter to make a selection..." << endl << endl;
-      
-      // menu choices
-      cout << "    1. Vampire" << endl;
-      cout << "    2. Barbarian" << endl;
-      cout << "    3. Blue Men" << endl;
-      cout << "    4. Medusa" << endl;
-      cout << "    5. Harry Potter" << endl;
-      cout << "    6. Exit" << endl;
+// acquire required info from the menu
+void settings(int& numRounds, int& addNum, int& removeNum) {
+   cout << "Please enter the following simulation settings: " << endl;
 
-      cout << endl << "Player Selection: ";
-      cin >> option1;
-      intValidation(option1);
+   // # of simulation rounds
+   cout << "   # of rounds: ";
+   cin >> numRounds;
+   intValidation(numRounds);
 
-      if(option1 != 1 && option1 != 2 && option1 != 3 && option1 != 4 && option1 != 5 && option1 != 6) {
-         cout << endl;
-         while(option1 != 1 && option1 != 2 && option1 != 3 && option1 != 4 && option1 != 5 && option1 != 6) {
-            cout << "Uh oh! It looks like you didn't input a valid menu option1... Please try again." << endl << endl;
-            cin.clear();
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-            cout << "Team #1: ";
-            cin >> option1;
-            cout << endl;
-         }
-      }
-      if(option1 == 6) {
-         break;
-      }
-   }
+   // probability that a random number will be added at the end of the buffer
+   cout << "   % chance that a random number will be added to the end of the buffer: ";
+   cin >> addNum;
+   intValidation(addNum);
+
+   // probability that a random number will be removed from the end of the buffer
+   cout << "   % chance that a random number will be removed from the front of the buffer: ";
+   cin >> removeNum;
+   intValidation(removeNum);
 }
-
 
 // the main/primary menu that users arrive at after starting the program;
 // this menu allows the user to navigate to various areas of the program
@@ -85,7 +66,7 @@ void OLD_GameMenu(char& option1) {
       // menu prompt
       cout << "Please select an option from the following choices:" << endl;
       cout << "Input the option's corresponding letter to make a selection..." << endl << endl;
-      
+
       // menu choices
       cout << "    a. Add a new node to the head" << endl;
       cout << "    b. Add a new node to the tail" << endl;
@@ -105,8 +86,8 @@ void OLD_GameMenu(char& option1) {
          while(tolower(option1) != 'a' && tolower(option1) != 'b' && tolower(option1) != 'c' && tolower(option1) != 'd' && tolower(option1) != 'e' && tolower(option1) != 'f' && tolower(option1) != 'g' && tolower(option1) != 'h') {
             cout << "Uh oh! It looks like you didn't input a valid menu option... Please try again." << endl << endl;
             cin.clear();
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-            cout << "Selection: "; 
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cout << "Selection: ";
             cin >> option1;
             cout << endl;
          }
@@ -136,7 +117,7 @@ void mainMenuReturn(bool& x) {
          x = true;
          option = 9;       // let the program escape the 'while loop' & return to the menu
       }
-      
+
       else if(option == 2) {
          cout << endl << "Do you want to exit the program?" << endl;
          cout << "   1. Yes" << endl;
@@ -144,13 +125,13 @@ void mainMenuReturn(bool& x) {
          cout << endl << "Selection: ";
          cin >> option;
          intValidation(option);
-         
+
          // escape the 'while loop' & quit the program
          if(option == 1) {
             x = false;
             option = 5;
          }
-         
+
          // do nothing and let the program run back through the 'while loop'
          else if(tolower(option) == 2) {
             cout << endl;

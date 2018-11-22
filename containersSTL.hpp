@@ -6,3 +6,21 @@
 ** Description: Implements input validation functions.
 *********************************************************************/
 
+#ifndef CONTAINERS_H
+#define CONTAINERS_H
+
+#include<cstdlib>
+#include<ctime>
+
+class Queue {
+ public:
+    int randNum();
+ private:
+};
+
+class Stack {
+ public:
+ private:
+};
+
+#endif
