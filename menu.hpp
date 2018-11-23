@@ -29,5 +29,7 @@ void GameMenu(int&);
 void mainMenuReturn(bool&);
 void settings(int&, int&, int&);
 int randNum();
+void programSelection(int&);
+std::string getStringInput();
 
 #endif

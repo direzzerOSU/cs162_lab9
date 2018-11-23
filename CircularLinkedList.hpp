@@ -17,30 +17,40 @@ using std::cin;
 using std::string;
 #include<cstdlib>
 #include<ctime>
+#include<vector>
 
 // these are the 'nodes' for each value
 // in the list
+template<typename T>
 struct QueueNode {
    QueueNode* next = nullptr;
    QueueNode* prev = nullptr;
-   int val;
+   T val;
 };
 
 // this is the 'container' for the circular
 // linked list
+template<typename T>
 class Queue {
  public:
     Queue() { head = nullptr; }
-    Queue(int x);
+    Queue(T&);
     ~Queue();
     bool isEmpty();
-    void addBack(int val);
-    int getFront();
+    void addBack(T&);
+    T getFront();
     void removeFront();
     void printQueue();
 	int randNum();
+	void toAdd(int&, int&, T&);
+	void toRemove(int&, int&);
+	void printRound();
+	int getLength();
+	void saveLength(int&);
+	double avgLength();
  private:
-    QueueNode* head = nullptr;
+    QueueNode<T>* head = nullptr;
+	std::vector<int> lengths;	// lengths of buffer during each round
 };
 
 #endif

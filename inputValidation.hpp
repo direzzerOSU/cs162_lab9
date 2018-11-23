@@ -26,7 +26,8 @@ using std::endl;
 // validate the user's input is the correct type (i.e., int and char, respectively)
 void intValidation(int&);
 void charValidation(char&);
-void floatValidation(float& value);
+void floatValidation(float&);
+void strValidation(std::string&);
 
 // check for a valid yes or no selection from user input
 void validYesNo(char&);

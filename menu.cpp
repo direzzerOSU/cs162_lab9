@@ -34,6 +34,26 @@ void introMenu(bool& status) {
    }
 }
 
+// allow the user to select which program he/she wants to run
+void programSelection(int& selection) {
+	// prompt the user with menu options
+	cout << "What program would you like to start?" << endl;
+	cout << "	1. Queue of integers" << endl;
+	cout << "	2. Palindrome stack" << endl;
+
+	cout << endl << "Selection: ";
+	cin >> selection;
+	intValidation(selection);
+
+	// ensure a valid menu option is chosen
+	while (selection != 1 && selection != 2) {
+		cout << "Whoops! You didn't choose a valid option... Please try again..." << endl;
+		cout << "Selection: ";
+		cin >> selection;
+		intValidation(selection);
+	}
+}
+
 // acquire required info from the menu
 void settings(int& numRounds, int& addNum, int& removeNum) {
    cout << "Please enter the following simulation settings: " << endl;
@@ -139,4 +159,17 @@ void mainMenuReturn(bool& x) {
          }
       }
    }
+}
+
+int randNum() {
+	return rand();
+}
+
+std::string getStringInput() {
+	cout << "Please enter a string (one word): ";
+	std::string input = "";
+	cin >> input;
+	strValidation(input);
+
+	return input;
 }

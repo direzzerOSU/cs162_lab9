@@ -42,6 +42,16 @@ void floatValidation(float& value) {
    }
 }
 
+void strValidation(std::string& input) {
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cout << "You have entered the wrong type of input. \n	Please enter another string: ";
+		cin >> input;
+		cout << endl;
+	}
+}
+
 // validYesNo = "Valid Yes or No selection"
 //    evaluates the user's input to make sure that a char was entered & ensures the char is either a Y or N (for yes and no, respectively)
 void validYesNo(int& value) {
