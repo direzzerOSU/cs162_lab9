@@ -12,15 +12,15 @@
 #include<cstdlib>
 #include<ctime>
 
-class Queue {
- public:
-    int randNum();
- private:
-};
-
-class Stack {
- public:
- private:
-};
+//class Queue {
+// public:
+//    int randNum();
+// private:
+//};
+//
+//class Stack {
+// public:
+// private:
+//};
 
 #endif

@@ -28,5 +28,6 @@ void GameMenu(int&);
 //void OLD_GameMenu(char&);
 void mainMenuReturn(bool&);
 void settings(int&, int&, int&);
+int randNum();
 
 #endif

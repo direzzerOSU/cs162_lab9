@@ -8,7 +8,8 @@
 
 #include "menu.hpp"
 #include "inputValidation.hpp"
-#include "containersSTL.hpp"
+// #include "containersSTL.hpp"
+#include "CircularLinkedList.hpp"
 
 int main() {
    // initialize the 'seed' for generating random ints
@@ -22,6 +23,12 @@ int main() {
 	   // acquire simulation settings
 	   int numRounds, addNum, removeNum;
 	   settings(numRounds, addNum, removeNum);
+
+	   // values that determine outcomes | whether to add/remove a value
+	   int randN, randAdd, randRemove;
+	   randN = (randNum() % 1000)+1;
+	   randAdd = (randNum() % 100) + 1;
+	   randRemove = (randNum() % 100) + 1; 
 
 	   Queue* queue = new Queue();
 	   cout << "queue.randNum() = " << queue->randNum() << endl;
