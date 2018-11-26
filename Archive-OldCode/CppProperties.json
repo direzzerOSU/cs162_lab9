@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64-Debug",
+      "includePath": [
+        "${workspaceRoot}\\..\\..\\..\\..\\..\\Program Files (x86)\\Visual Leak Detector\\include",
+        "${workspaceRoot}\\..\\..\\..\\..\\..\\Program Files (x86)\\Visual Leak Detector\\include",
+        "${env.INCLUDE}",
+        "${workspaceRoot}\\**"
+      ],
+      "defines": [
+        "WIN32",
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "intelliSenseMode": "windows-msvc-x64"
+    }
+  ]
+}

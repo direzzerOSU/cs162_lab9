@@ -1,0 +1,10 @@
+﻿  CircularLinkedList.cpp
+c:\users\direz\onedrive\documents\github\cs162_lab9\vs_project\circularlinkedlist.cpp(207): warning C4018: '<': signed/unsigned mismatch
+  c:\users\direz\onedrive\documents\github\cs162_lab9\vs_project\circularlinkedlist.cpp(205): note: while compiling class template member function 'double Queue<int>::avgLength(void)'
+  c:\users\direz\onedrive\documents\github\cs162_lab9\vs_project\circularlinkedlist.cpp(193): note: see reference to function template instantiation 'double Queue<int>::avgLength(void)' being compiled
+  c:\users\direz\onedrive\documents\github\cs162_lab9\vs_project\circularlinkedlist.cpp(213): note: see reference to class template instantiation 'Queue<int>' being compiled
+c:\users\direz\onedrive\documents\github\cs162_lab9\vs_project\circularlinkedlist.cpp(85): warning C4715: 'Queue<int>::getFront': not all control paths return a value
+c:\users\direz\onedrive\documents\github\cs162_lab9\vs_project\circularlinkedlist.cpp(85): warning C4715: 'Queue<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::getFront': not all control paths return a value
+  CircularLinkedList.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  CircularLinkedList.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  CS162-Lab9.vcxproj -> C:\Users\direz\OneDrive\Documents\GitHub\cs162_lab9\VS_Project\Debug\CS162-Lab9.exe
